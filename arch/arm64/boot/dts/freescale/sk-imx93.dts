@@ -96,7 +96,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		gpio = <&gpio2 11 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     reg_usbhost_en: regulator-usbhost-en {
         compatible = "regulator-fixed";
@@ -104,7 +104,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		gpio = <&gpio2 10 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     reg_usbotg_en: regulator-usbotg-en {
         compatible = "regulator-fixed";
@@ -112,7 +112,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		gpio = <&gpio2 18 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     reg_wwlan_en: regulator-wwlan-en {
         compatible = "regulator-fixed";
@@ -120,7 +120,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		gpio = <&adp5585gpio_2 8 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     reg_gps_en: regulator-gps-en {
         compatible = "regulator-fixed";
@@ -128,7 +128,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		gpio = <&adp5585gpio_2 0 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     reg_hdmi_en: regulator-hdmi-en {
         compatible = "regulator-fixed";
@@ -136,7 +136,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		gpio = <&adp5585gpio_2 5 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     reg_vref_1v8: regulator-adc-vref {
         compatible = "regulator-fixed";
@@ -151,7 +151,7 @@
 		regulator-min-microvolt = <3300000>;
 		regulator-max-microvolt = <3300000>;
 		gpio = <&gpio1 10 GPIO_ACTIVE_HIGH>;
-    }
+    };
 
     usdhc3_pwrseq: usdhc3_pwrseq {
         status = "okay";
@@ -600,12 +600,6 @@
     status = "okay";
 };
 
-&tpm5 {
-    pinctrl-names = "default";
-    pinctrl-0 = <&pinctrl_pwm5>;
-    status = "okay";
-};
-
 &mu1 {
     status = "okay";
 };
@@ -836,12 +830,6 @@
     pinctrl_pwm3: pinctrl-pwm3 {
         fsl,pins = <
             MX93_PAD_GPIO_IO24__TPM3_CH3            0x27e
-        >;
-    };
-    
-    pinctrl_pwm5: pinctrl-pwm5 {
-        fsl,pins = <
-            MX93_PAD_GPIO_IO06__TPM5_CH0            0x27e
         >;
     };
     
